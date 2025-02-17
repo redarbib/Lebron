@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+    <title>Clubs</title>
+</head>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Lebron</a></li>
+                <li><a href="/html/clubs.html" class="active">Clubs</a></li>
+                <li><a href="/html/prestaties.html">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="clubs">
+            <div class="clubButtons">
+                <a href="#" class="club-button cavs active" onclick="showImages('cavs', this)">Cavs</a>
+                <a href="#" class="club-button heat" onclick="showImages('heat', this)">Heat</a>
+                <a href="#" class="club-button lakers" onclick="showImages('lakers', this)">Lakers</a>
+            </div>
+            <div class="images-container">
+                <div class="cavs-images active">
+                    <img src="/img/cavs1.jpg" alt="Lebron James began his NBA career with the Cleveland Cavaliers, where he quickly became a superstar and led the team to multiple playoff appearances." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/cavs2.jpg" alt="During his time with the Cavs, Lebron won two MVP awards and took the team to the NBA Finals in 2007." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/cavs3.jpg" alt="Lebron returned to the Cavs in 2014 and led them to their first NBA Championship in 2016, cementing his legacy in Cleveland." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/cavs4.jpg" alt="Lebron's impact on the Cavs and the city of Cleveland is immeasurable, making him a beloved figure in the region." onclick="showOverlay(this.src, this.alt)">
+                </div>
+                <div class="heat-images hidden">
+                    <img src="/img/heat1.jpg" alt="Lebron James joined the Miami Heat in 2010, forming a super team with Dwyane Wade and Chris Bosh." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/heat2.jpg" alt="With the Heat, Lebron won two NBA Championships in 2012 and 2013, and was named Finals MVP both times." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/heat3.jpg" alt="Lebron's time with the Heat was marked by dominance, as the team reached the NBA Finals four consecutive times." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/heat4.jpg" alt="Lebron's tenure with the Heat solidified his status as one of the greatest players in NBA history." onclick="showOverlay(this.src, this.alt)">
+                </div>
+                <div class="lakers-images hidden">
+                    <img src="/img/lakers1.jpg" alt="Lebron James signed with the Los Angeles Lakers in 2018, bringing his star power to one of the NBA's most storied franchises." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/lakers2.jpg" alt="In 2020, Lebron led the Lakers to their 17th NBA Championship, earning his fourth Finals MVP award." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/lakers3.jpg" alt="Lebron's leadership and performance have been crucial to the Lakers' success, making him a fan favorite in Los Angeles." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/lakers4.jpg" alt="Lebron continues to chase greatness with the Lakers, adding to his already legendary career." onclick="showOverlay(this.src, this.alt)">
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="overlay" onclick="hideOverlay()">
+        <div id="overlay-content">
+            <img id="highlighted-image" src="" alt="Highlighted Image">
+            <p id="image-text"></p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Contact: <a href="mailto:redarbib48@gmail.com">redarbib48@gmail.com</a></p>
+        <p>All rights reserved to the Praizes Foundation</p>
+        <p>The Praizes Foundation takes care of people who are sick, mainly children, and creates content for idols that the kids look up to. <br> We also involve ourselves with new AI-powered aging chain technologies. After losing funding from Google, we continued our work through donations and our own pockets.</p>
+        <button>Donate</button>
+    </footer>
+    <script src="/js/script.js"></script>
+    <script>
+        function showImages(club, element) {
+            const clubs = ['cavs', 'heat', 'lakers'];
+            clubs.forEach(c => {
+                const imagesDiv = document.querySelector(`.${c}-images`);
+                if (c === club) {
+                    imagesDiv.classList.remove('hidden');
+                    imagesDiv.classList.add('active');
+                } else {
+                    imagesDiv.classList.add('hidden');
+                    imagesDiv.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.club-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        function showOverlay(src, alt) {
+            const overlay = document.getElementById('overlay');
+            const highlightedImage = document.getElementById('highlighted-image');
+            const imageText = document.getElementById('image-text');
+
+            highlightedImage.src = src;
+            highlightedImage.alt = alt;
+            imageText.textContent = alt;
+
+            overlay.classList.add('active');
+        }
+
+        function hideOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.classList.remove('active');
+        }
+
+        document.getElementById('overlay').addEventListener('click', hideOverlay);
+    </script>
+</body>
+</html>
