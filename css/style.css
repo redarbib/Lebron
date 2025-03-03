@@ -1,0 +1,295 @@
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+nav li {
+    margin-right: 20px;
+    position: relative;
+}
+#navbar {
+    background-color: #330174;
+    padding: 30px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    z-index: 1;
+}
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+#navbar a[href="/index.html"] {
+    font-size: 1.5em;
+    position: absolute;
+    left: -650px;
+}
+#navbar a.active::after {
+    content: '';
+    display: block;
+    width: 72px;
+    height: 4px;
+    background-color: yellow;
+    border-radius: 300px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.lebronLakers {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+body {
+    margin: 0;
+    padding-top: 70px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+}
+.videoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+.lebronVideo {
+    width: 100%;
+    height: auto;
+}
+.textBoxContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.textBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+    width: 60%;
+}
+.textBox div {
+    background-color: #330174;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    height: 226px;
+    width: 365px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+}
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.clubs {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    flex: 1;
+}
+.clubButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    padding: 10px;
+    border-radius: 10px;
+}
+.club-button {
+    width: 150px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: 20px;
+    position: relative;
+    text-align: center;
+    line-height: 80px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.club-button:hover {
+    transform: scale(1.05);
+}
+.club-button.cavs {
+    background-color: #B4975A;
+    border: 4px solid #72253D;
+}
+.club-button.heat {
+    background-color: #98002E;
+    border: 4px solid #F9A01B;
+}
+.club-button.lakers {
+    background-color: #FEBA01;
+    border: 4px solid #330174;
+}
+.club-button.active::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: yellow;
+    border-radius: 300px;
+    position: absolute;
+    border-color: #330174;
+    left: -10px;
+    top: 0;
+    transition: width 0.5s ease-in-out;
+}
+.cavs, .heat, .lakers {
+    display: block;
+}
+.images-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px; /* Adjusted margin */
+    flex: 1;
+}
+.images-container div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+.images-container img {
+    width: 400px;
+    height: 250px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.images-container img:hover {
+    transform: scale(1.05);
+}
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+#overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+#overlay-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#overlay-content img {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+}
+#overlay-content p {
+    font-family: 'Inter', sans-serif;
+    color: black;
+    font-size: 1.2em;
+}
+.infoBox {
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: flex-start; /* Align to the top */
+    width: 904px;
+    height: 186px;
+    background-color: #300569;
+    border-radius: 40px;
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.lebronImage {
+    width: 215px;
+    height: 154px;
+}
+.infoBoxGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.smallInfoBox {
+    background-color: #330174;
+    padding: 20px;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.smallInfoBox p {
+    padding: 10px;
+}
