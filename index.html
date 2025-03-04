@@ -3,27 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
     <title>Lebron</title>
 </head>
-<body>
-    <header id="navbar">
-        <nav>
-            <ul>
-                <li><a href="/index.html" class="active">Lebron</a></li>
-                <li><a href="/html/clubs.html">Clubs</a></li>
-                <li><a href="/html/prestaties.html">Achievements</a></li>
+<body class="bg-gray-900 text-white font-sans">
+    <header id="navbar" class="bg-purple-900 p-6 fixed w-full z-10">
+        <nav class="container mx-auto flex justify-center">
+            <ul class="flex space-x-6">
+                <li><a href="/index.html" class="text-white text-lg font-bold active">Lebron</a></li>
+                <li><a href="/html/clubs.html" class="text-white text-lg">Clubs</a></li>
+                <li><a href="/html/prestaties.html" class="text-white text-lg">Achievements</a></li>
             </ul>
         </nav>
     </header>
-    <main id="app">
-        <section class="videoContainer">
-            <video class="lebronVideo" autoplay loop muted>
+    <main id="app" class="pt-24">
+        <section class="videoContainer flex justify-center">
+            <video class="lebronVideo w-full" autoplay loop muted>
                 <source src="/videos/lebron.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
+        <section class="squaresContainer grid grid-cols-2 gap-1 p-5">
+            <div class="square bg-purple-700 flex items-center justify-center" style="width: 100px; height: 100px;">
+                <h2 class="text-center">Square 1</h2>
+            </div>
+            <div class="square bg-purple-700 flex items-center justify-center" style="width: 100px; height: 100px;">
+                <h2 class="text-center">Square 2</h2>
+            </div>
+            <div class="square bg-purple-700 flex items-center justify-center" style="width: 100px; height: 100px;">
+                <h2 class="text-center">Square 3</h2>
+            </div>
+            <div class="square bg-purple-700 flex items-center justify-center" style="width: 100px; height: 100px;">
+                <h2 class="text-center">Square 4</h2>
+            </div>
+        </section>
+    </main>
+    <footer class="footer bg-gray-800 text-gray-400 text-center p-6 mt-auto">
+        <p>Contact: <a href="mailto:redarbib48@gmail.com" class="text-gray-400 hover:underline">redarbib48@gmail.com</a></p>
+        <p>All rights reserved to the Praizes Foundation</p>
+        <p>The Praizes Foundation takes care of people who are sick, mainly children, and creates content for idols that the kids look up to. <br> We also involve ourselves with new AI-powered aging chain technologies. After losing funding from Google, we continued our work through donations and our own pockets.</p>
+        <button class="bg-yellow-500 text-black font-bold py-2 px-4 rounded mt-4">Donate</button>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
     <script src="/js/script.js"></script>
 </body>
