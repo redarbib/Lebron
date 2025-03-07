@@ -3,60 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
     <title>Clubs</title>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <header id="navbar" class="bg-purple-900 p-6 fixed w-full z-10">
-        <nav class="container mx-auto flex justify-center">
-            <ul class="flex space-x-6">
-                <li><a href="/index.html" class="text-white text-lg">Lebron</a></li>
-                <li><a href="/html/clubs.html" class="text-white text-lg font-bold active">Clubs</a></li>
-                <li><a href="/html/prestaties.html" class="text-white text-lg">Achievements</a></li>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Lebron</a></li>
+                <li><a href="/html/clubs.html" class="active">Clubs</a></li>
+                <li><a href="/html/prestaties.html">Achievements</a></li>
             </ul>
         </nav>
     </header>
-    <main class="pt-24">
-        <section class="clubs flex">
-            <div class="clubButtons flex flex-col items-center fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4">
-                <a href="#" class="club-button cavs bg-yellow-500 text-black font-bold py-2 px-4 rounded active" onclick="showImages('cavs', this)">Cavs</a>
-                <a href="#" class="club-button heat bg-red-600 text-white font-bold py-2 px-4 rounded" onclick="showImages('heat', this)">Heat</a>
-                <a href="#" class="club-button lakers bg-purple-700 text-white font-bold py-2 px-4 rounded" onclick="showImages('lakers', this)">Lakers</a>
+    <main>
+        <section class="clubs">
+            <div class="clubButtons">
+                <a href="#" class="club-button cavs active" onclick="showImages('cavs', this)">Cavs</a>
+                <a href="#" class="club-button heat" onclick="showImages('heat', this)">Heat</a>
+                <a href="#" class="club-button lakers" onclick="showImages('lakers', this)">Lakers</a>
             </div>
-            <div class="images-container flex-1 flex justify-center items-center p-5">
-                <div class="cavs-images grid grid-cols-2 gap-4 active">
-                    <img src="/img/cavs1.jpg" alt="Lebron James began his NBA career with the Cleveland Cavaliers, where he quickly became a superstar and led the team to multiple playoff appearances." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/cavs2.jpg" alt="During his time with the Cavs, Lebron won two MVP awards and took the team to the NBA Finals in 2007." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/cavs3.jpg" alt="Lebron returned to the Cavs in 2014 and led them to their first NBA Championship in 2016, cementing his legacy in Cleveland." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/cavs4.jpg" alt="Lebron's impact on the Cavs and the city of Cleveland is immeasurable, making him a beloved figure in the region." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
+            <div class="images-container" style="display: flex; justify-content: center;">
+                <div class="cavs-images active">
+                    <img src="/img/cavs1.jpg" alt="Lebron James began his NBA career with the Cleveland Cavaliers, where he quickly became a superstar and led the team to multiple playoff appearances." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/cavs2.jpg" alt="During his time with the Cavs, Lebron won two MVP awards and took the team to the NBA Finals in 2007." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/cavs3.jpg" alt="Lebron returned to the Cavs in 2014 and led them to their first NBA Championship in 2016, cementing his legacy in Cleveland." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/cavs4.jpg" alt="Lebron's impact on the Cavs and the city of Cleveland is immeasurable, making him a beloved figure in the region." onclick="showOverlay(this.src, this.alt)">
                 </div>
-                <div class="heat-images grid grid-cols-2 gap-4 hidden">
-                    <img src="/img/heat1.jpg" alt="Lebron James joined the Miami Heat in 2010, forming a super team with Dwyane Wade and Chris Bosh." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/heat2.jpg" alt="With the Heat, Lebron won two NBA Championships in 2012 and 2013, and was named Finals MVP both times." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/heat3.jpg" alt="Lebron's time with the Heat was marked by dominance, as the team reached the NBA Finals four consecutive times." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/heat4.jpg" alt="Lebron's tenure with the Heat solidified his status as one of the greatest players in NBA history." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
+                <div class="heat-images hidden">
+                    <img src="/img/heat1.jpg" alt="Lebron James joined the Miami Heat in 2010, forming a super team with Dwyane Wade and Chris Bosh." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/heat2.jpg" alt="With the Heat, Lebron won two NBA Championships in 2012 and 2013, and was named Finals MVP both times." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/heat3.jpg" alt="Lebron's time with the Heat was marked by dominance, as the team reached the NBA Finals four consecutive times." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/heat4.jpg" alt="Lebron's tenure with the Heat solidified his status as one of the greatest players in NBA history." onclick="showOverlay(this.src, this.alt)">
                 </div>
-                <div class="lakers-images grid grid-cols-2 gap-4 hidden">
-                    <img src="/img/lakers1.jpg" alt="Lebron James signed with the Los Angeles Lakers in 2018, bringing his star power to one of the NBA's most storied franchises." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/lakers2.jpg" alt="In 2020, Lebron led the Lakers to their 17th NBA Championship, earning his fourth Finals MVP award." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/lakers3.jpg" alt="Lebron's leadership and performance have been crucial to the Lakers' success, making him a fan favorite in Los Angeles." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
-                    <img src="/img/lakers4.jpg" alt="Lebron continues to chase greatness with the Lakers, adding to his already legendary career." class="rounded-lg cursor-pointer" onclick="showOverlay(this.src, this.alt)">
+                <div class="lakers-images hidden">
+                    <img src="/img/lakers1.jpg" alt="Lebron James signed with the Los Angeles Lakers in 2018, bringing his star power to one of the NBA's most storied franchises." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/lakers2.jpg" alt="In 2020, Lebron led the Lakers to their 17th NBA Championship, earning his fourth Finals MVP award." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/lakers3.jpg" alt="Lebron's leadership and performance have been crucial to the Lakers' success, making him a fan favorite in Los Angeles." onclick="showOverlay(this.src, this.alt)">
+                    <img src="/img/lakers4.jpg" alt="Lebron continues to chase greatness with the Lakers, adding to his already legendary career." onclick="showOverlay(this.src, this.alt)">
                 </div>
             </div>
         </section>
     </main>
-    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden" onclick="hideOverlay()">
-        <div id="overlay-content" class="bg-white p-6 rounded-lg flex items-center space-x-4">
-            <img id="highlighted-image" src="" alt="Highlighted Image" class="rounded-lg">
-            <p id="image-text" class="text-black"></p>
+    <div id="overlay" onclick="hideOverlay()">
+        <div id="overlay-content">
+            <img id="highlighted-image" src="" alt="Highlighted Image">
+            <p id="image-text"></p>
         </div>
     </div>
-    <footer class="footer bg-gray-800 p-6 text-center">
-        <p>Contact: <a href="mailto:redarbib48@gmail.com" class="text-blue-400">redarbib48@gmail.com</a></p>
+    <footer class="footer">
+        <p>Contact: <a href="mailto:redarbib48@gmail.com">redarbib48@gmail.com</a></p>
         <p>All rights reserved to the Praizes Foundation</p>
         <p>The Praizes Foundation takes care of people who are sick, mainly children, and creates content for idols that the kids look up to. <br> We also involve ourselves with new AI-powered aging chain technologies. After losing funding from Google, we continued our work through donations and our own pockets.</p>
-        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded mt-4">Donate</button>
+        <button>Donate</button>
     </footer>
     <script src="/js/script.js"></script>
     <script>

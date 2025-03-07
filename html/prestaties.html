@@ -3,56 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
     <title>Achievements</title>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    <header id="navbar" class="bg-purple-900 p-6 fixed w-full z-10">
-        <nav class="container mx-auto flex justify-center">
-            <ul class="flex space-x-6">
-                <li><a href="/index.html" class="text-white text-lg">Home</a></li>
-                <li><a href="/html/clubs.html" class="text-white text-lg">Clubs</a></li>
-                <li><a href="/html/prestaties.html" class="text-white text-lg font-bold active">Achievements</a></li>
+<body>
+    <header id="navbar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/html/clubs.html">Clubs</a></li>
+                <li><a href="/html/prestaties.html" class="active">Achievements</a></li>
             </ul>
         </nav>
     </header>
-    <main class="pt-24">
-        <section class="infoBox flex items-center p-6 bg-purple-700 rounded-lg shadow-lg mx-auto my-6 max-w-4xl">
-            <img src="/img/_image.png" alt="Lebron James" class="lebronImage w-1/3 rounded-lg">
-            <div class="infoText ml-6">
-                <h2 class="text-2xl font-bold">Lebron James</h2>
+    <main>
+        <section class="infoBox">
+            <img src="/img/image.jpg" alt="Lebron James" class="lebronImage">
+            <div class="infoText">
+                <h2>Lebron James</h2>
                 <p>Lebron James is widely regarded as one of the greatest basketball players of all time. His combination of size, skill, and basketball IQ has made him a dominant force in the NBA for over a decade. Off the court, Lebron is also known for his philanthropy and activism, using his platform to advocate for social justice and support various charitable causes.</p>
             </div>
         </section>
-        <section class="textBoxContainer grid grid-cols-1 md:grid-cols-2 gap-6 p-6 max-w-4xl mx-auto">
-            <div class="textBox bg-purple-700 p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold">Lebron's Early Career</h2>
-                <p>Lebron James was drafted by the Cleveland Cavaliers in 2003 as the first overall pick.</p>
-                <p>He quickly became a star, winning the NBA Rookie of the Year Award.</p>
-            </div>
-            <div class="textBox bg-purple-700 p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold">Lebron's Miami Heat Era</h2>
-                <p>Lebron joined the Miami Heat in 2010, forming a super team with Dwyane Wade and Chris Bosh.</p>
-                <p>He won two NBA Championships with the Heat in 2012 and 2013.</p>
-            </div>
-            <div class="textBox bg-purple-700 p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold">Lebron's Return to Cleveland</h2>
-                <p>Lebron returned to the Cleveland Cavaliers in 2014.</p>
-                <p>He led the team to their first NBA Championship in 2016.</p>
-            </div>
-            <div class="textBox bg-purple-700 p-6 rounded-lg shadow-lg">
-                <h2 class="text-xl font-bold">Lebron's Lakers Legacy</h2>
-                <p>Lebron signed with the Los Angeles Lakers in 2018.</p>
-                <p>He led the Lakers to their 17th NBA Championship in 2020.</p>
+        <section class="textBoxContainer">
+            <div class="textBox">
+                <div>
+                    <h2>Lebron's Early Career</h2>
+                    <p>Lebron James was drafted by the Cleveland Cavaliers in 2003 as the first overall pick.</p>
+                    <p>He quickly became a star, winning the NBA Rookie of the Year Award.</p>
+                </div>
+                <div>
+                    <h2>Lebron's Miami Heat Era</h2>
+                    <p>Lebron joined the Miami Heat in 2010, forming a super team with Dwyane Wade and Chris Bosh.</p>
+                    <p>He won two NBA Championships with the Heat in 2012 and 2013.</p>
+                </div>
+                <div>
+                    <h2>Lebron's Return to Cleveland</h2>
+                    <p>Lebron returned to the Cleveland Cavaliers in 2014.</p>
+                    <p>He led the team to their first NBA Championship in 2016.</p>
+                </div>
+                <div>
+                    <h2>Lebron's Lakers Legacy</h2>
+                    <p>Lebron signed with the Los Angeles Lakers in 2018.</p>
+                    <p>He led the Lakers to their 17th NBA Championship in 2020.</p>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="footer bg-gray-800 text-gray-400 text-center p-6 mt-auto">
-        <p>Contact: <a href="mailto:redarbib48@gmail.com" class="text-gray-400 hover:underline">redarbib48@gmail.com</a></p>
+    <footer class="footer">
+        <p>Contact: <a href="mailto:redarbib48@gmail.com">redarbib48@gmail.com</a></p>
         <p>All rights reserved to the Praizes Foundation</p>
         <p>The Praizes Foundation takes care of people who are sick, mainly children, and creates content for idols that the kids look up to. <br> We also involve ourselves with new AI-powered aging chain technologies. After losing funding from Google, we continued our work through donations and our own pockets.</p>
-        <button class="bg-yellow-500 text-black font-bold py-2 px-4 rounded mt-4">Donate</button>
+        <button>Donate</button>
     </footer>
     <script src="/js/script.js"></script>
 </body>

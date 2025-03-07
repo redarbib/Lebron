@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded");
 
-    // Vue app for Lebron stats
     const app = Vue.createApp({
         data() {
             return {
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     app.mount("#app");
 
-    // Fix overlay event listener error
     const overlay = document.getElementById('overlay');
     if (overlay) {
         overlay.addEventListener('click', () => {
@@ -33,14 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Overlay element not found!");
     }
 
-    // Fix image click event listener
     document.querySelectorAll('.images-container img').forEach(img => {
         img.addEventListener('click', () => {
             showOverlay(img.src, img.alt);
         });
     });
 
-    // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -51,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Function to show images per club
 function showImages(club, element) {
     const clubs = ['cavs', 'heat', 'lakers'];
     clubs.forEach(c => {
@@ -70,7 +65,6 @@ function showImages(club, element) {
     }
 }
 
-// Function to show overlay
 function showOverlay(imageSrc, text) {
     const overlay = document.getElementById('overlay');
     const imgElement = document.getElementById('highlighted-image');
@@ -83,7 +77,6 @@ function showOverlay(imageSrc, text) {
     }
 }
 
-// Function to hide overlay
 function hideOverlay() {
     const overlay = document.getElementById('overlay');
     overlay.classList.remove('active');
